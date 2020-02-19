@@ -56,21 +56,3 @@ class MuseumTest < Minitest::Test
     assert_equal [imax], dmns.recommend_exhibits(patron_2)
   end
 end
-
-# pry(main)> patron_1 = Patron.new("Bob", 20)
-# # => #<Patron:0x00007fb400a51cc8...>
-#
-# pry(main)> patron_1.add_interest("Dead Sea Scrolls")
-#
-# pry(main)> patron_1.add_interest("Gems and Minerals")
-#
-# pry(main)> patron_2 = Patron.new("Sally", 20)
-# # => #<Patron:0x00007fb400036338...>
-#
-# pry(main)> patron_2.add_interest("IMAX")
-#
-# pry(main)> dmns.recommend_exhibits(patron_1)
-# # => [#<Exhibit:0x00007fb400bbcdd8...>, #<Exhibit:0x00007fb400b851f8...>]
-#
-# pry(main)> dmns.recommend_exhibits(patron_2)
-# # => [#<Exhibit:0x00007fb400acc590...>]
