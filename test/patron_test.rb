@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/exhibit'
-require './lib/exhibit'
+require './lib/patron'
 
 class PatronTest < Minitest::Test
 
@@ -10,11 +10,15 @@ class PatronTest < Minitest::Test
 
     assert_instance_of Patron, patron_1
   end
+
+  def test_it_has_attributes
+    patron_1 = Patron.new("Bob", 20)
+
+    assert_equal "Bob", patron_1.name
+    assert_equal 20, patron_1spending_money
+  end
 end
 
-# pry(main)> patron_1 = Patron.new("Bob", 20)
-# # => #<Patron:0x00007fcb13b5c7d8...>
-#
 # pry(main)> patron_1.name
 # # => "Bob"
 #
